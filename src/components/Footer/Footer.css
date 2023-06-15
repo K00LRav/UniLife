@@ -1,0 +1,36 @@
+.footer-container{
+    background-color: black;
+    height: 97px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.link-container{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-link, .term-link, .privacy-link{
+    color: gray;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.company-info{
+    color: gray;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.year-founded{
+    padding-right: 40px;
+}

@@ -1,0 +1,19 @@
+.header-container{
+    background-color: #00a2e1;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img{
+    padding-left: 60px;
+}
+
+.nav-link{
+    display: flex;
+    padding: 20px;
+    width: 30%;
+    justify-content: space-around;
+    color: white;
+}
