@@ -1,10 +1,8 @@
-import React from 'react'
-import './BottomBanner.css'
+import React from "react";
+import "./BottomBanner.css";
 
 function BottomBanner() {
-  return (
-    <div className='bottom-banner-container'>BottomBanner</div>
-  )
+  return <div className="bottom-banner-container">BottomBanner</div>;
 }
 
-export default BottomBanner
+export default BottomBanner;
