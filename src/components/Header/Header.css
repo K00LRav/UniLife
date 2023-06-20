@@ -18,3 +18,34 @@
     color: white;
     font-size: 16px;
 }
+
+
+.short-list div{
+    display: flex;
+    width: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.short-list span{
+    font-size: 18px;
+}
+
+.contact-us div{
+    display: flex;
+    width: 105px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-us span{
+    font-size: 18px;
+}
+
+.heart{
+    font-size: 20px;
+}
+
+.envelope{
+    font-size: 20px;
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Limelight&family=Poppins&display=swap');
+
+.banner-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    background-color: rgba(0,0,0,0.5)
+}
+
+.title{
+    padding-bottom: 20px;
+    font-size: 64px;
+    font-weight: 500;
+    font-family: 'Epilogue'
+}
+
+.sub-title{
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Epilogue'
+}

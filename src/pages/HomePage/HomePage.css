@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Limelight&family=Poppins&display=swap');
+
+.home-page-title{
+    text-align: center;
+    font-family: 'Epilogue';
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    padding-top: 50px;
+}

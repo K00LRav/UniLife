@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Limelight&family=Poppins&display=swap');
+
+.cards-container h2{
+    padding: 10px;
+    margin-top: 60px;
+}
+
+.city-name{
+    font-family: 'Epilogue';
+    font-size: 36px;
+}
+
+.property-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 80px;
+}
+
+.details{
+    height: 500px;
+    width: 400px;
+}
+
+.apartment-image{
+    width: 400px;
+    height: 260px;
+    border-radius: 24px 24px 0 0;
+    object-fit: cover;
+}
+
+.price-accommodation{
+    background-color: #3a5295;
+    width: 400px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Epilogue';
+}
+
+.accommodation-icons span{
+    padding-right: 20px
+}
+
+.rent{
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.included{
+    font-size: 12px;
+    padding-left: 20px;
+    font-family: 'Epilogue';
+}
+
+.bed-icon{
+    margin-right: 10px;
+}
+
+.bath-icon{
+    margin-right: 10px;
+}
+
+.furnished{
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    font-family: 'Epilogue';
+    align-items: center;
+    padding-top: 15px;
+    border-right: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+}
+
+.address{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    gap: 5px;
+    border-right: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+    padding-bottom: 15px;
+    font-family: 'Epilogue'
+}
+
+.viewHome-btn {
+    height: 48px;
+    width: 400px;
+    background: transparent;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border: 1px solid darkgray;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    font-family: 'Epilogue';
+  }
+  

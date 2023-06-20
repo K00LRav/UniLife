@@ -1,4 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Limelight&family=Poppins&display=swap');
+
 .bottom-banner-container{
     background-color: #00a2e1;
     height: 374px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Epilogue';
+    color: white;
+    
 }
+
+.signup-container{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+}
+
+.signup-container h2{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.signup-container p{
+    font-size: 20px;
+    width: 440px;
+    margin-bottom: 40px;
+}
+
+.signup-container input{
+    width: 440px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    padding: 0px 15px;
+    font-size: 18px;
+    outline: none;
+}
+
+.signup-container form input::placeholder{
+    font-size: 21px;
+    font-family: 'Epilouge';
+    color: #CED3D8;
+
+}
+
+.social-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;    
+}
+
+.social-container h2{
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.social-container svg{
+    height: 30px;
+    width: 30px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+  }
