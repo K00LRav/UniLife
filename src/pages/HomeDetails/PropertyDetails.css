@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.photos-container{
+    width: 620px;
+    height: 596px;
+    background-color: aquamarine;
+    margin-bottom: 50px;
+}
+
+/* details container div*/
+
+.details-container{
+    width: 620px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px auto;
+    padding: 15px;
+    border: solid 1px gray;
+    border-radius: 24px;
+}
+
+
+.address-details{
+    width: 620px;
+    height: 115px;
+    border-bottom: solid 1px gray;
+}
+
+.address-details p{
+    font-size: 36px;
+    font-family: 'Epilogue';
+    padding: 10px;
+    text-align: center;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+.items span{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Epilogue';
+    padding-bottom: 15px;
+}
+.bedrooms, .bathroom, .property-type, .price, .furnished-type, .available{
+    color: #3A5295;
+    font-weight: 700;
+}
+
+.bedrooms, .bathroom, .price{
+    font-size: 40px;
+}
+
+.property-type, .furnished-type, .available{
+    font-size: 24px;
+}
+
+.bedrooms{
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.bathroom{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* end of details container */
+
+
+/* description container div*/
+.description{
+    width: 520px;
+    height: 296px;
+    font-family: 'Epilogue';
+}
+
+.description h2{
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.description p{
+    font-size: 20px;
+}
+/* end of description container */
+
+/* bedroom pricing div*/
+.bedroom-prices{
+    font-family: 'Epilogue';
+    width: 620px;
+    height: 347px;
+
+}
+
+.bedroom-prices h2{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.beds{
+    border: solid 1px gray;
+    border-radius: 24px;
+}
+
+.bedroom-prices .bed1 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+  }
+
+.bedroom-prices .bed2 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+  }
+
+  .bedroom-prices .bed3 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+  }
+
+.bedroom-prices .bed4 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.bedroom-prices .bed1 p {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 24px;
+  }
+
+.bedroom-prices .bed2 p {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 24px;
+  }
+
+.bedroom-prices .bed3 p {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 24px;
+  }
+
+.bedroom-prices .bed4 p {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 24px;
+  }
+/* bedroom pricing end */
+
+
+/* key features div*/
+.key-features{
+    font-family: 'Epilogue';
+    width: 395px;
+    height: 328px;
+}
+
+.key-features h2{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.key-features p{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.check-mark{
+    color: #3A5295;
+}
+/* key features end */

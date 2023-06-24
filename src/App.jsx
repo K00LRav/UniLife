@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
 import BottomBanner from './components/BottomBanner/BottomBanner';
 import CityDetails from './pages/CityDetails/CityDetails';
-import HomeDetails from './pages/HomeDetails/HomeDetails';
+import PropertyDetails from './pages/HomeDetails/PropertyDetails';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path="/cityDetails/:cityId" element={<CityDetails />} />
-        <Route path="/HomeDetails/:cityId" element={<HomeDetails />} />
+        <Route path="/PropertyDetails/:propertyId" element={<PropertyDetails />} />
       </Routes>
       <BottomBanner/>
       <Footer/>

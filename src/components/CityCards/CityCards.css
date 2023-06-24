@@ -1,9 +1,9 @@
 .cities-container{
-    width: 82%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px auto;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-right: 10px;
+    margin-left: 15px;
 }
 
 .city-content {

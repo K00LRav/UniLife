@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Limelight&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
 
 .cards-container h2{
     padding: 10px;
@@ -8,6 +8,7 @@
 .city-name{
     font-family: 'Epilogue';
     font-size: 36px;
+    padding-left: 80px;
 }
 
 .property-cards-container{
