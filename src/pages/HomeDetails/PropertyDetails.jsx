@@ -7,7 +7,7 @@ import { MdOutlineKingBed } from "react-icons/md";
 import { FaBath } from "react-icons/fa";
 import { BsSuitHeart } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
-import { FavoriteContext } from "../../contexts/FavoriteContext";
+// import { FavoriteContext } from "../../contexts/FavoriteContext";
 
 
 function PropertyDetails() {
@@ -38,14 +38,14 @@ function PropertyDetails() {
 
 
   //this is to store the favorite apartments.
-  const  {favorites, addApartment, removeApartment}  = useContext(FavoriteContext);
+  // const  {favorites, addApartment, removeApartment}  = useContext(FavoriteContext);
   
   //check to see if the card is in favorites
-  useEffect(() => {
-    setIsFavorite(favorites.find((item) => item?.id === apartmentDetails._id))
-  }, [favorites]);
+  // useEffect(() => {
+  //   setIsFavorite(favorites.find((item) => item?.id === apartmentDetails._id))
+  // }, [favorites]);
 
-  console.log(favorites)
+  // console.log(favorites)
   
   return (
     <div className="main-container">
