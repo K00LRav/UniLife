@@ -1,29 +1,70 @@
-import React from "react";
-import CoverBanner from "../../components/CoverBanner/CoverBanner";
+import { useState, useEffect, useContext } from "react";
 import "./PropertyDetails.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useEffect, useState } from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import { MdOutlineKingBed } from "react-icons/md";
 import { FaBath } from "react-icons/fa";
+import { BsSuitHeart } from "react-icons/bs";
+import { AiFillHeart } from "react-icons/ai";
+import { FavoriteContext } from "../../contexts/FavoriteContext";
+
 
 function PropertyDetails() {
+
+  const baseUrl = import.meta.env.VITE_BASE_URL;
   const { propertyId } = useParams();
+
+  //to store the details of the apartment
   const [apartmentDetails, setApartmentDetails] = useState([]);
 
+  //to store the main image of the apartment details page
+  const [mainImage, setMainImage] = useState([]);
+
+  //to check if an item is in the favorites
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  //grabs the apartment details and stores it in the apartmentDetails const
   useEffect(() => {
     axios
-      .get(`https://unilife-server.herokuapp.com/properties/${propertyId}`)
+      .get(`${baseUrl}/properties/${propertyId}`)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setApartmentDetails(res.data);
+        setMainImage(res.data.images[0]);
       })
       .catch((err) => console.log(err));
   }, []);
+
+
+  //this is to store the favorite apartments.
+  const  {favorites, addApartment, removeApartment}  = useContext(FavoriteContext);
+  
+  //check to see if the card is in favorites
+  useEffect(() => {
+    setIsFavorite(favorites.find((item) => item?.id === apartmentDetails._id))
+  }, [favorites]);
+
+  console.log(favorites)
+  
   return (
     <div className="main-container">
-      <div className="photos-container">{/* container on the left */}</div>
+      <div className="photos-container">
+        {/* container on the left */}
+        <div className="photo-top">{<img src={mainImage} alt="" />}</div>
+        <div className="photo-bottom">
+          <div className="photo-bottom">
+            {apartmentDetails?.images?.map((item, index) => (
+              <img
+                key={index}
+                src={item}
+                onClick={() => setMainImage(item)}
+                alt=""
+              />
+            ))}
+          </div>
+        </div>
+      </div>
 
       <div className="details-container">
         {/* container on the right of the images*/}
@@ -35,50 +76,58 @@ function PropertyDetails() {
         </div>
 
         <div className="items">
-              <span>Bedrooms </span>
-              <div className="bedrooms">
-                <MdOutlineKingBed/>
-                {apartmentDetails.bedroom_count}
-              </div>
-            </div>
+          <span>Bedrooms </span>
+          <div className="bedrooms">
+            <MdOutlineKingBed />
+            {apartmentDetails.bedroom_count}
+          </div>
+        </div>
 
-            <div className="items">
-              <span>Bathroom</span>
-              <div className="bathroom">
-                <FaBath />
-                {apartmentDetails.bathroom_count}
-              </div>
-            </div>
+        <div className="items">
+          <span>Bathroom</span>
+          <div className="bathroom">
+            <FaBath />
+            {apartmentDetails.bathroom_count}
+          </div>
+        </div>
 
-            <div className="items">
-              <span>Property Type</span>
-              <div className="property-type">
-                {apartmentDetails.property_type}
-              </div>
-            </div>
+        <div className="items">
+          <span>Property Type</span>
+          <div className="property-type">{apartmentDetails.property_type}</div>
+        </div>
 
-            <div className="items">
-              <span>Price</span>
-              <div className="price">
-                {apartmentDetails.rent}
-              </div>
-            </div>
+        <div className="items">
+          <span>Price</span>
+          <div className="price">{apartmentDetails.rent}</div>
+        </div>
 
-            <div className="items">
-              <span>Furnished type</span>
-              <div className="furnished-type">
-                {apartmentDetails.furnished}
-              </div>
-            </div>
+        <div className="items">
+          <span>Furnished type</span>
+          <div className="furnished-type">{apartmentDetails.furnished}</div>
+        </div>
 
-            <div className="items">
-              <span>Availability</span>
-              <div className="available">
-                {apartmentDetails.availability}
-              </div>
-            </div>
+        <div className="items">
+          <span>Availability</span>
+          <div className="available">{apartmentDetails.availability}</div>
+        </div>
 
-            
+        <div className="btns-container">
+          <button className="short-list-btn">
+            {isFavorite ? (
+              <AiFillHeart
+                style={{ color: "#3A5295", fontSize: "23px" }}
+                onClick={() => removeApartment(apartmentDetails?.id)}
+              />
+            ) : (
+              <BsSuitHeart
+                style={{ color: "#3A5295", fontSize: "23px" }}
+                onClick={() => addApartment(apartmentDetails)}
+              />
+            )}
+            Shortlist
+          </button>
+          <button className="bookviewing-btn">Book Viewing</button>
+        </div>
       </div>
 
       <div className="description">
@@ -114,7 +163,7 @@ function PropertyDetails() {
           {apartmentDetails.key_features?.map((item, index) => (
             <p key={index}>
               {" "}
-              <AiOutlineCheck className="check-mark"/> {item}
+              <AiOutlineCheck className="check-mark" /> {item}
             </p>
           ))}
         </p>

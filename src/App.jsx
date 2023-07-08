@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import BottomBanner from './components/BottomBanner/BottomBanner';
 import CityDetails from './pages/CityDetails/CityDetails';
 import PropertyDetails from './pages/HomeDetails/PropertyDetails';
+import ShortList from './pages/ShortList';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<HomePage/>}/>
         <Route path="/cityDetails/:cityId" element={<CityDetails />} />
         <Route path="/PropertyDetails/:propertyId" element={<PropertyDetails />} />
+        <Route path="/ShortList" element={<ShortList/>}/>
       </Routes>
       <BottomBanner/>
       <Footer/>

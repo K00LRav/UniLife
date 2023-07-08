@@ -3,17 +3,39 @@
 .main-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
+    gap: 30px;
     padding-left: 30px;
     padding-right: 20px;
 }
 
+/* left side photo container */
 .photos-container{
-    width: 620px;
+    width: 790px;
     height: 596px;
-    background-color: aquamarine;
     margin-bottom: 50px;
+    margin-top: 40px;
 }
+
+.photos-container img{
+    width: 790px;
+    height: 440px;
+    border-radius: 12px;
+}
+
+.photos-container .photo-bottom {
+    width: 790px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 5px;
+  }
+
+  .photos-container .photo-bottom img {
+    width: 182px;
+    height: 150px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
 
 /* details container div*/
 
@@ -24,7 +46,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    margin: 40px auto;
+    margin-top: 40px;
     padding: 15px;
     border: solid 1px gray;
     border-radius: 24px;
@@ -86,6 +108,44 @@ gap: 20px;
 /* end of details container */
 
 
+/* buttons below details box */
+
+.btns-container{
+    margin-top: 65px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.short-list-btn{
+    width: 270px;
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid darkgray;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bookviewing-btn{
+    width: 270px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #3A5295;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+/* end of buttons */
+
+
 /* description container div*/
 .description{
     width: 520px;
@@ -103,6 +163,7 @@ gap: 20px;
     font-size: 20px;
 }
 /* end of description container */
+
 
 /* bedroom pricing div*/
 .bedroom-prices{
