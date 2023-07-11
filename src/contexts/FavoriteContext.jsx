@@ -3,43 +3,42 @@ import { useState, createContext, useEffect } from "react";
 export const FavoriteContext = createContext();
 
 
-export default function FavoritesContextProvider(props) {
+export default function FavoriteContextProvider({children}) {
   //create global state
-  const [favorites, setFavorites] = useState([])
+    const [favorites, setFavorites] = useState([])
 
   useEffect(() => {
     const storedFavs = localStorage.getItem("favoritesList");
-    if (storedFavs !== null) {
+    if (storedFavs) {
       setFavorites(JSON.parse(storedFavs));
     }
   }, []);
 
 
-  const addApartment = (item) => {
-    console.log("add", item);
-    let newFavorites = [...favorites, item];
+  const addApartment = (itemToAdd) => {
+    console.log('added', itemToAdd)
+    const newFavorites = [...favorites, itemToAdd];
+
     setFavorites(newFavorites);
     localStorage.setItem("favoritesList", JSON.stringify(newFavorites));
   };
 
-  const removeApartment = (item) => {
-    let newFavorites = favorites?.filter((newFav) => newFav?.id !== item);
+  const removeApartment = (itemToRemove) => {
+    console.log('remove', itemToRemove)
+    let newFavorites = favorites?.filter((item) => item?._id !== itemToRemove);
+
     setFavorites(newFavorites);
     localStorage.setItem("favoritesList", JSON.stringify(newFavorites));
-    console.log(favorites);
+    console.log();
   };
 
-
-  const value = {
-    favorites,
-    addApartment,
-    removeApartment,
-  };
+  // const v
 
   return (
-    <FavoriteContext.Provider value={value}>
-      {props.children}
+    <FavoriteContext.Provider value={{favorites, addApartment, removeApartment}}>
+      {children}
     </FavoriteContext.Provider>
   );
+
 }
 

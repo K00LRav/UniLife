@@ -8,11 +8,14 @@ import BottomBanner from './components/BottomBanner/BottomBanner';
 import CityDetails from './pages/CityDetails/CityDetails';
 import PropertyDetails from './pages/HomeDetails/PropertyDetails';
 import ShortList from './pages/ShortList';
+// import { FavoriteContext } from './contexts/FavoriteContext';
+import FavoriteContextProvider from "./contexts/FavoriteContext"
 
 function App() {
 
 
   return (
+    <FavoriteContextProvider>
     <BrowserRouter>
     <Header/>
       <Routes>
@@ -24,6 +27,7 @@ function App() {
       <BottomBanner/>
       <Footer/>
     </BrowserRouter>
+      </FavoriteContextProvider>
   )
 }
 

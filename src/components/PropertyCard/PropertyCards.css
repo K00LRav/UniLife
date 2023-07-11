@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .cards-container h2{
     padding: 10px;
     margin-top: 60px;

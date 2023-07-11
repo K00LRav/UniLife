@@ -1,0 +1,12 @@
+.favorites-container h1{
+    text-align: center;
+    padding: 20px;
+}
+
+.favorites-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 20px;
+}

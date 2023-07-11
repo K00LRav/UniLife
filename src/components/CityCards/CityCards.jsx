@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 
 function CityCards() {
 
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+
       //stores the cities 
   const [cities, setCities] = useState([])
 
@@ -12,7 +14,7 @@ function CityCards() {
   
 
   useEffect(()=>{
-    axios.get('https://unilife-server.herokuapp.com/cities?limit=9')
+    axios.get(`${baseUrl}/cities?limit=9`)
     .then(res  =>{
         console.log(res.data.response)
         setCities(res.data.response)

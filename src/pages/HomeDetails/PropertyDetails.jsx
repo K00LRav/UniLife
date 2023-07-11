@@ -7,7 +7,7 @@ import { MdOutlineKingBed } from "react-icons/md";
 import { FaBath } from "react-icons/fa";
 import { BsSuitHeart } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
-// import { FavoriteContext } from "../../contexts/FavoriteContext";
+import { FavoriteContext } from "../../contexts/FavoriteContext";
 
 
 function PropertyDetails() {
@@ -24,6 +24,8 @@ function PropertyDetails() {
   //to check if an item is in the favorites
   const [isFavorite, setIsFavorite] = useState(false);
 
+  const  {favorites, addApartment, removeApartment}  = useContext(FavoriteContext);
+
   //grabs the apartment details and stores it in the apartmentDetails const
   useEffect(() => {
     axios
@@ -38,17 +40,17 @@ function PropertyDetails() {
 
 
   //this is to store the favorite apartments.
-  // const  {favorites, addApartment, removeApartment}  = useContext(FavoriteContext);
+
   
   //check to see if the card is in favorites
-  // useEffect(() => {
-  //   setIsFavorite(favorites.find((item) => item?.id === apartmentDetails._id))
-  // }, [favorites]);
-
-  // console.log(favorites)
+  useEffect(() => {
+    setIsFavorite(favorites.find((item) => item?._id === apartmentDetails?._id))
+  }, [apartmentDetails?._id, favorites]);
   
   return (
+
     <div className="main-container">
+{/* image container on the left */}
       <div className="photos-container">
         {/* container on the left */}
         <div className="photo-top">{<img src={mainImage} alt="" />}</div>
@@ -65,9 +67,10 @@ function PropertyDetails() {
           </div>
         </div>
       </div>
+{/* end of left image container */}
 
+{/* container on the right of the images*/}
       <div className="details-container">
-        {/* container on the right of the images*/}
         <div className="address-details">
           <p>
             {apartmentDetails.address?.street}, {apartmentDetails.address?.city}
@@ -110,13 +113,16 @@ function PropertyDetails() {
           <span>Availability</span>
           <div className="available">{apartmentDetails.availability}</div>
         </div>
+{/* end of container on the right */}
 
+
+{/* favorites button and booking view section */}
         <div className="btns-container">
           <button className="short-list-btn">
             {isFavorite ? (
               <AiFillHeart
                 style={{ color: "#3A5295", fontSize: "23px" }}
-                onClick={() => removeApartment(apartmentDetails?.id)}
+                onClick={() => removeApartment(apartmentDetails._id)}
               />
             ) : (
               <BsSuitHeart
@@ -129,6 +135,8 @@ function PropertyDetails() {
           <button className="bookviewing-btn">Book Viewing</button>
         </div>
       </div>
+{/* end of booking and favorites section */}
+
 
       <div className="description">
         <h2>Description</h2>
@@ -159,14 +167,13 @@ function PropertyDetails() {
 
       <div className="key-features">
         <h2>Key Features</h2>
-        <p>
           {apartmentDetails.key_features?.map((item, index) => (
             <p key={index}>
               {" "}
               <AiOutlineCheck className="check-mark" /> {item}
             </p>
           ))}
-        </p>
+
       </div>
     </div>
   );
