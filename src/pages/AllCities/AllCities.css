@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+
+.search-by-city h3{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-weight: 500;
+    font-size: 36px;
+    font-family: 'Epilogue';
+}
+
+.all-cities{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px;
+}
+
+.allCities-content{
+    width: 350px;
+    height: 98px;
+    border: 1px solid gray;
+    border-radius: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .allCities-content p{
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .allCities-content:hover{
+    background-color: #3a5295;
+    color: #fff;
+  }
+  

@@ -8,7 +8,7 @@ import BottomBanner from './components/BottomBanner/BottomBanner';
 import CityDetails from './pages/CityDetails/CityDetails';
 import PropertyDetails from './pages/HomeDetails/PropertyDetails';
 import ShortList from './pages/ShortList';
-// import { FavoriteContext } from './contexts/FavoriteContext';
+import AllCities from './pages/AllCities/AllCities';
 import FavoriteContextProvider from "./contexts/FavoriteContext"
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
         <Route path="/cityDetails/:cityId" element={<CityDetails />} />
         <Route path="/PropertyDetails/:propertyId" element={<PropertyDetails />} />
         <Route path="/ShortList" element={<ShortList/>}/>
+        <Route path="/AllCities" element={<AllCities/>}/>
       </Routes>
       <BottomBanner/>
       <Footer/>
