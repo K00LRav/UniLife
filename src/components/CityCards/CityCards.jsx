@@ -37,6 +37,9 @@ function CityCards() {
     </Link> 
     )
     }
+    <div className="see-cities">
+      <Link className='link-to-all-cities' to={`/AllCities`}>See All Cities</Link>
+      </div>
   </div>
   )
 }

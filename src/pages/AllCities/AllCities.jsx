@@ -22,12 +22,16 @@ function AllCities() {
 
   return (
     <div className='all-cities-container'>
-       <CoverBanner/>
+       <CoverBanner
+                 title="Student Accomodation"
+                 subTitle="UniLife have student accommodation available across the UK. Whatever you`re
+                  after, we can help you find the right student accommodation for you."
+       />
         <div className="search-by-city">
             <h3>Search by City</h3>
         </div>
         <div className="all-cities">
-            
+
             {
                 allCities.map((cities) =>(
                 <Link to={`/cityDetails/${cities?._id}`} key={cities?.id} className="allCities-content">

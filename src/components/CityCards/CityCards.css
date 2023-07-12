@@ -44,3 +44,22 @@
     color: #fff;
     font-weight: 400;
   }
+
+  .see-cities{
+    padding: 20px
+  }
+
+  .link-to-all-cities{
+    color: #fff;
+  background-color: #3a5295;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 12px 0px;
+  border: none;
+  border-radius: 12px;
+  width: 220px;
+  margin-left: 45%;
+  margin-bottom: 80px;
+  cursor: pointer;
+  text-decoration: none;
+  }
