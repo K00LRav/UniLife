@@ -56,7 +56,7 @@ function Header() {
                   >
                     <img
                       className="mail-box-img"
-                      src="src/assets/mailbox.svg"
+                      src="../src/assets/mailbox.svg"
                       alt=""
                     />
                   </button>

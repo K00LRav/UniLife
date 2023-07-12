@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./PropertyDetails.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -8,6 +8,7 @@ import { FaBath } from "react-icons/fa";
 import { BsSuitHeart } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
 import { FavoriteContext } from "../../contexts/FavoriteContext";
+import Modal from "react-modal";
 
 
 function PropertyDetails() {
@@ -37,6 +38,22 @@ function PropertyDetails() {
       })
       .catch((err) => console.log(err));
   }, []);
+
+// modal box for booking view
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+    overlay: { backgroundColor: "rgba(0,0,0,0.5)" },
+  };
+// end booking view modal box
 
 
   //this is to store the favorite apartments.
@@ -132,7 +149,7 @@ function PropertyDetails() {
             )}
             Shortlist
           </button>
-          <button className="bookviewing-btn">Book Viewing</button>
+          <button className="bookviewing-btn" onClick={() => setIsOpen(true)}>Book Viewing</button>
         </div>
       </div>
 {/* end of booking and favorites section */}
@@ -174,6 +191,79 @@ function PropertyDetails() {
             </p>
           ))}
 
+      </div>
+
+{/* booking view modal box */}
+<div className="booking-view-container">
+      <Modal
+              isOpen={isOpen}
+              onRequestClose={() => setIsOpen(false)}
+              style={customStyles}
+              contentLabel="Contact Us Modal"
+            >
+              <div className="modal-box">
+                <div className="modal-header">
+                  <h2>Book a Viewing</h2>
+                  <button
+                    className="modal-close-btn"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <img
+                      className="mail-box-img"
+                      src="../src/assets/addhome.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div className="contact-message">
+                <p>
+            {apartmentDetails.address?.street}, {apartmentDetails.address?.city}
+            , {apartmentDetails.address?.postcode}
+          </p>
+                </div>
+                <form className="contact-form">
+                  <div className="item">
+                    <label htmlFor="name">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div className="item">
+                    <label htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Enter your email address"
+                    />
+                  </div>                  
+                  <div className="item">
+                    <label htmlFor="email">Phone Number</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                  <div className="item">
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      placeholder="Enter your message"
+                    ></textarea>
+                  </div>
+
+                  <div className="submit-container">
+                    <button type="submit" className="submit-btn">
+                      Sumit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </Modal>
+            {/* end of booking view modal box */}
       </div>
     </div>
   );
