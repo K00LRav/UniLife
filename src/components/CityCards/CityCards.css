@@ -46,20 +46,22 @@
   }
 
   .see-cities{
-    padding: 20px
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
   }
 
   .link-to-all-cities{
-    color: #fff;
+  color: #fff;
   background-color: #3a5295;
   font-weight: 500;
   font-size: 18px;
   padding: 12px 0px;
   border: none;
   border-radius: 12px;
-  width: 220px;
-  margin-left: 45%;
-  margin-bottom: 80px;
+  width: 200px;
+  height: 48px;
+  text-align: center;
   cursor: pointer;
   text-decoration: none;
   }

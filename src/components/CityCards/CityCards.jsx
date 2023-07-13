@@ -25,6 +25,7 @@ function CityCards() {
 
 
   return (
+    <div className="main">
     <div className='cities-container'>
     {
       cities.map((item) => 
@@ -37,7 +38,8 @@ function CityCards() {
     </Link> 
     )
     }
-    <div className="see-cities">
+  </div>
+  <div className="see-cities">
       <Link className='link-to-all-cities' to={`/AllCities`}>See All Cities</Link>
       </div>
   </div>
