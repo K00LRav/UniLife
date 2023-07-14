@@ -39,8 +39,24 @@ function CityCards() {
     )
     }
   </div>
-  <div className="see-cities">
-      <Link className='link-to-all-cities' to={`/AllCities`}>See All Cities</Link>
+      <div className="see-cities">
+        <Link className='link-to-all-cities' to={`/AllCities`}>See All Cities</Link>
+      </div>
+      <div className="compare-container">
+      <div className="compare-title">
+        <h2>Compare all inclusive student homes.</h2>
+      </div>
+      <div className="search-compare-bills-boxes">
+        <div className="search">
+          <img src="src/assets/search-img.svg"/>
+        </div>
+        <div className="compare">
+          <img src="src/assets/compare.svg"/>
+        </div>
+        <div className="bills">
+          <img src="src/assets/bills-included.svg"/>
+        </div>
+      </div>
       </div>
   </div>
   )
