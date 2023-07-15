@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
 
+.back-to-search{
+    margin-top: 10px;
+}
+.back-search {
+    font-size: 19px;
+    font-weight: 400;
+    font-family: 'Epilogue';
+    margin-top: 30px;
+    margin-left: 30px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+  }
+
+
 .main-container{
     display: grid;
     grid-template-columns: 1fr 1fr;

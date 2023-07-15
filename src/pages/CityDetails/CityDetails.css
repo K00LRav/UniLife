@@ -3,3 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.testimonial-container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 520px;
+    margin: 20px 50px 20px 50px;
+    border-radius: 24px;
+    background-color: aliceblue;
+    width: auto;
+}
+
+.student-life{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 520px;
+    height: 360px;
+    margin-top: 80px;
+}
+
+.student-life h2{
+    font-weight: 500;
+    font-size: 32px;
+    font-family: 'Epilogue';
+    margin-bottom: 20px;    
+}
+
+.student-life p{
+    font-family: 'Epilogue';
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+}
+.student-img{
+    margin-top: 60px;
+}

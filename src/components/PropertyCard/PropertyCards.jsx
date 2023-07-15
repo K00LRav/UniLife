@@ -1,4 +1,3 @@
-import React from "react";
 import "./PropertyCards.css";
 import { BiBed } from "react-icons/bi";
 import { FaBath } from "react-icons/fa";

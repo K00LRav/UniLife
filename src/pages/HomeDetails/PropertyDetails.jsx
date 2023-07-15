@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./PropertyDetails.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import { AiOutlineCheck } from "react-icons/ai";
+import { AiOutlineLeft, AiOutlineCheck } from "react-icons/ai";
 import { MdOutlineKingBed } from "react-icons/md";
 import { FaBath } from "react-icons/fa";
 import { BsSuitHeart } from "react-icons/bs";
@@ -65,6 +65,13 @@ function PropertyDetails() {
   }, [apartmentDetails?._id, favorites]);
   
   return (
+    <div>
+      <div className="back-to-search">
+      <Link to={`/cityDetails/${apartmentDetails?.city_id?._id}`} className="back-search">
+          <AiOutlineLeft />
+          <p>Back to Search</p>
+      </Link>
+      </div>
 
     <div className="main-container">
 {/* image container on the left */}
@@ -266,6 +273,7 @@ function PropertyDetails() {
             {/* end of booking view modal box */}
       </div>
     </div>
+  </div>
   );
 }
 
